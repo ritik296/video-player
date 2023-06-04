@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<video oncontextmenu="return false;" id="video" controls ></video>
+<script type="text/javascript">
+var URL = window.URL || window.webkitURL;
+async function main(){
+    console.log("main");
+    var video = document.getElementById('video');
+    var blob = await fetch('http://127.0.0.1:5500/video.mp4').then(r => r.blob());
+    console.log(blob);
+    var url = URL.createObjectURL(blob);
+    video.src = url;
+    // video.load();
+    // video.onloadeddata = function() {
+    //     video.play();
+    // }
+}
+main();
+</script>
+</body>
+</html>

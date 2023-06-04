@@ -1,0 +1,8 @@
+{
+  "engines": {
+    "bulid-css": "npx tailwindcss -i ./public/style/input.css -o ./public/style/style.css --watch"
+  }
+  ,"devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
